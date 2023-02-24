@@ -62,7 +62,7 @@ void gamePlay(char name[])
 
     int attempt = 1;
 
-    printf("\n\nAttempt %d", attempt);
+    printf("Attempt %d", attempt);
     printf("\nWhat is the generated number?\nYour answer: ");
     int answer;
     scanf("%d", &answer);
@@ -76,15 +76,16 @@ void gamePlay(char name[])
         if (x == answer)
         {
             stars();
-            printf("\nCongratulations, %s", name);
+            printf("Congratulations, %s!\n", name);
             printf("You have won THE RANDOM NUMBER C GAME\nThe generated number is: %d", x);
+            stars();
             winCount++;
             break;
         }
         else if (x > answer)
         {
 
-            printf("\n* HINT: Try a higher number *");
+            printf("\n* HINT: Try a higher number *\n");
             printf("\nAttempt %d", attempt);
             printf("\nWhat is the generated number?\nYour answer: ");
             scanf("%d", &answer);
@@ -92,7 +93,7 @@ void gamePlay(char name[])
         }
         else
         {
-            printf("\n* HINT: Try a lower number *");
+            printf("\n* HINT: Try a lower number *\n");
             printf("\nAttempt %d", attempt);
             printf("\nWhat is the generated number?\nYour answer: ");
             scanf("%d", &answer);
@@ -126,7 +127,6 @@ void gamePlay(char name[])
 
 void playerRecord(char name[30], int won, int lost, int totalGames)
 {
-    stars();
     printf("\nPLAYER RECORD");
     printf("\nPlayer name: %s", name);
     printf("Games won: %d", won);
