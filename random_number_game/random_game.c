@@ -77,7 +77,7 @@ void gamePlay(char name[])
         {
             stars();
             printf("Congratulations, %s!\n", name);
-            printf("You have won THE RANDOM NUMBER C GAME\nThe generated number is: %d", x);
+            printf("You have won THE RANDOM NUMBER C GAME\nThe generated number is: %d\n", x);
             stars();
             winCount++;
             break;
@@ -127,12 +127,12 @@ void gamePlay(char name[])
 
 void playerRecord(char name[30], int won, int lost, int totalGames)
 {
-    printf("\nPLAYER RECORD");
-    printf("\nPlayer name: %s", name);
-    printf("Games won: %d", won);
-    printf("\nGames lost: %d", lost);
+    printf("PLAYER RECORD\n");
+    printf("Player name: %s\n", name);
+    printf("Games won: %d\n", won);
+    printf("Games lost: %d\n", lost);
     totalGames = won + lost;
-    printf("\nTotal Games Played: %d", totalGames);
+    printf("Total Games Played: %d", totalGames);
 }
 
 
